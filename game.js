@@ -1,5 +1,12 @@
 console.log("game.js is running");
 
+let state = {
+
+currentScreen: "title",
+score: 0,
+coins: 0
+
+};
 
 
 function showScreen(name){
@@ -10,8 +17,8 @@ function showScreen(name){
 
     document.querySelector(selector).classList.add("active");
 
-    
-}
+    state.currentScreen = name;
+};
 
 document.querySelector("#start-btn").addEventListener("click", () => {
   showScreen("cutting");
