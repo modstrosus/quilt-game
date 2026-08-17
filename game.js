@@ -8,6 +8,18 @@ coins: 0
 
 };
 
+let titleScreen = {
+
+  enter: function() {
+    console.log("entering title");
+  },
+  
+  exit: function() {
+    console.log("leaving title");
+  }
+
+};
+
 
 function showScreen(name){
 
