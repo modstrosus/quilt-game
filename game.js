@@ -17,7 +17,41 @@ let titleScreen = {
   exit: function() {
     console.log("leaving title");
   }
+  
+  document.querySelector("#start-btn").addEventListener("click", () => {
+  showScreen("cutting");
+  });
 
+};
+
+let cuttingScreen = {
+
+  enter: function() {
+    console.log("entering cutting");
+  },
+  
+  exit: function() {
+    console.log("leaving cutting");
+  }
+
+};
+
+let resultsScreen = {
+
+  enter: function() {
+    console.log("entering results");
+  },
+  
+  exit: function() {
+    console.log("leaving results");
+  }
+
+};
+
+let screens = {
+  title: titleScreen,
+  cutting: cuttingScreen,
+  results: resultsScreen
 };
 
 
@@ -32,6 +66,6 @@ function showScreen(name){
     state.currentScreen = name;
 };
 
-document.querySelector("#start-btn").addEventListener("click", () => {
-  showScreen("cutting");
-});
+
+
+
